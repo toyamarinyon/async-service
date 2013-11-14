@@ -1,0 +1,13 @@
+{
+  "name": "socket.io",
+  "homepage": "https://github.com/LearnBoost/socket.io",
+  "_release": "64f6b244b6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "64f6b244b6bd79880ba2e0ba00778a2309b39d0b"
+  },
+  "_source": "git://github.com/LearnBoost/socket.io.git",
+  "_target": "master",
+  "_originalSource": "socket.io"
+}

@@ -1,0 +1,13 @@
+doctype 5
+html lang="ja"
+  head
+    meta charset="UTF-8"
+    title quizzzzzz
+    link rel="stylesheet" href="/application.css"
+    link rel="stylesheet" href="/vendor/bower/font-awesome/css/font-awesome.min.css"
+  body
+    #page-set
+      .page-contents
+        == yield
+    script src="http://localhost:10234/socket.io/socket.io.js"
+    script src="/vendor/bower/requirejs/require.js" data-main="/application"

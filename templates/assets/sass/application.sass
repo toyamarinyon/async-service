@@ -1,0 +1,46 @@
+@import compass/reset
+@import compass
+@import lib/zurui
+@import variables/color
+
+html
+ height: 100%
+body
+ color: $base_color
+ +gradient-top-lighten($main_color)
+
+.button
+ +button($font-size: 12px, $color: $sub_color)
+.large-button
+ +button($font-size: 24px, $color: $sub_color)
+
+.login
+ margin-top: 250px
+ text-align: center
+ .page-title
+  font-weight: bold
+  font-size: 56px
+ table
+  margin: 30px auto 0
+
+.q-set
+ text-align: center
+ margin: 20px
+ .question
+  font-weight: bold
+  font-size: 24px
+  span
+   color: $main_color
+   +border-radius(3px)
+   background: $base_color
+   padding: 4px 6px
+   margin-right: 8px
+ .answer
+  margin-top: 40px
+
+.manage-set
+ .user
+  float: left
+  width: 24%
+  height: 200px
+  border: 1px solid $sub_color

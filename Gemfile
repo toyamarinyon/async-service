@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'foreman'
+gem 'sinatra'
+gem 'sinatra-contrib', :require => 'sinatra/reloader'
+gem 'sinatra-rocketio'
+gem 'slim'
+gem 'sass'
+gem 'compass'
+gem 'coffee-script'

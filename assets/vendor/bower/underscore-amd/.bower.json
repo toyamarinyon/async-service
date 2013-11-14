@@ -1,0 +1,13 @@
+{
+  "name": "underscore-amd",
+  "homepage": "https://github.com/amdjs/underscore",
+  "_release": "37a9fb361f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "37a9fb361fe1667c395d6133de40ab29f1d9e461"
+  },
+  "_source": "git://github.com/amdjs/underscore.git",
+  "_target": "master",
+  "_originalSource": "underscore-amd"
+}
