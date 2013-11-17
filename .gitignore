@@ -3,3 +3,5 @@
 .sass-cache
 npm-debug.log
 node_modules
+/db/schema.rb
+*.db

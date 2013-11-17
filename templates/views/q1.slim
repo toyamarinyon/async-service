@@ -1,10 +1,19 @@
-.q-set
-  .question 
-    span Q1
-    |外山の出身地は？
-
-  .answer
-    a.large-button A 京都府
-    a.large-button B 北海道
-    a.large-button C 岡山県
-    a.large-button D 熊本県
+.question_wrapper
+  .question_title 藤田の出身地は？
+  .answer_link style="text-align: right;"
+    a#q1_answer href="javascript:void(0);" 正解
+    a href="/a1" 正解者発表
+  .answer_choices.clearfix
+    #ac1.answer_choice
+      .number 1
+      .content 北海道
+    #ac2.answer_choice
+      .number 2
+      .content 京都府
+    #ac3.answer_choice
+      .number 3
+      .content 愛媛県
+    #ac4.answer_choice
+      .number 4
+      .content 群馬県
+#emitter data-emit-type="question" data-emit-value="1"

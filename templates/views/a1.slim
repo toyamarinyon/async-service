@@ -1,0 +1,21 @@
+.question_wrapper
+  .question_title 正解者発表ー！
+  .right_answers
+    ul.right_answer
+      -@answers.each do |answer|
+        li.clearfix
+          .answer_name =answer.user.name
+          /.answer_time =answer.answer_time
+          /|秒
+      /li.clearfix
+      /  .answer_name 2. きゅうべい
+      /  .answer_time 2.58 秒
+      /li.clearfix
+      /  .answer_name 3. くさなぎ
+      /  .answer_time 3.01 秒
+      /li.clearfix
+      /  .answer_name 4. ハミングバード
+      /  .answer_time 3.24 秒
+      /li.clearfix
+      /  .answer_name 5. roro9
+      /  .answer_time 4.02 秒
