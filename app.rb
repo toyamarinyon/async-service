@@ -22,20 +22,21 @@ end
 post '/api/send_answer' do
 	uid = session['uid']
 	question_no = params[:question_no]
-	answer_no = params[:answer_no]
-	Answer.create(
-		:user_id => uid,
-		:question_no => question_no,
-		:answer_no => answer_no,
-		:answer_time => '00:01'
-	)
+	answer_no   = params[:answer_no]
+	thinking_ms = params[:thinking_ms]
+	answer = Answer.where(:user_id => uid, :question_no => question_no).first_or_create do |table|
+		table.answer_no   = answer_no
+		table.thinking_ms = thinking_ms
+	end
+
+	answer.update_attributes(:answer_no => answer_no, :thinking_ms => thinking_ms)
 
 	content_type :json
 	data =  {
 		'user_id'     => uid,
 		'question_no' => question_no,
 		'answer_no'   => answer_no,
-		'answer_time' => '00:01'
+		'answer_time' => thinking_ms
 	}
 
 	data.to_json
@@ -45,11 +46,27 @@ get '/q1' do
 	slim :'views/q1'
 end
 
+get '/q2' do
+	slim :'views/q2'
+end
+
+get '/q3' do
+	slim :'views/q3'
+end
+
 get '/a1' do
-	@answers = Answer.where(:question_no => 1, :answer_no => 2)
-	# @answers = User.where(:id => 1 )
-	# @answers.to_json
+	@answers = Answer.where(:question_no => 1, :answer_no => 2).order('thinking_ms')
 	slim :'views/a1'
+end
+
+get '/a2' do
+	@answers = Answer.where(:question_no => 2, :answer_no => 4).order('thinking_ms')
+	slim :'views/a2'
+end
+
+get '/a3' do
+	@answers = Answer.where(:question_no => 3, :answer_no => 3).order('thinking_ms')
+	slim :'views/a3'
 end
 
 get '/manage' do

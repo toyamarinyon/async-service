@@ -8,4 +8,10 @@ io.sockets.on('connection', function (socket) {
 	socket.on('exec_q1', function () {
 	    socket.broadcast.emit('client_exec_q1');
 	});
+	socket.on('exec_q2', function () {
+	    socket.broadcast.emit('client_exec_q2');
+	});
+	socket.on('exec_q3', function () {
+	    socket.broadcast.emit('client_exec_q3');
+	});
 });
