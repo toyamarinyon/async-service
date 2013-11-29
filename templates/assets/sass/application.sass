@@ -107,6 +107,24 @@ $answer_choice_number_height: 40px
    left: 0%
    background: #e06a3b
    opacity: .4
+ .answer_panel
+  width: 25%
+  float: left
+  text-align: center
+  padding: 10px
+  box-sizing: border-box
+  .answer_button
+   $buttonsize: 68px
+   display: block
+   font-size: 24px
+   font-weight: bold
+   background: $moresub_color
+   height: $buttonsize
+   line-height: $buttonsize
+   text-decoration: none
+   color: $base_color
+  .answer_button.select
+   background: $main_color
  .right_answers
   margin-top: 14px
   position: relative
@@ -132,5 +150,11 @@ $answer_choice_number_height: 40px
   ul.right_answer li:nth-child(n+2)
    margin-top: 12px
 
+ .help
+  margin-top: 20px
+
  .answer_link a
   margin-left: 1.1em
+
+ .centering
+  text-align: center

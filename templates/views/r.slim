@@ -1,13 +1,22 @@
 .question_wrapper
   #q.question_title data-question-no=0 問題：---
-  .answer_choices
-    input type="radio" name="answer_choice" value="1"
-    | 1番
-    input type="radio" name="answer_choice" value="2"
-    | 2番
-    input type="radio" name="answer_choice" value="3"
-    | 3番
-    input type="radio" name="answer_choice" value="4"
-    | 4番
-    br
-    a#answer_submit.button 送信
+  .help
+    i.fa-question
+    |  正解だと思う番号を選択して「解答」ボタンをクリックしてください。
+  .answer_choices.clearfix
+    .answer_panel 
+      a.answer_button href="javascript:void(0)" 1
+    .answer_panel
+      a.answer_button href="javascript:void(0)" 2
+    .answer_panel
+      a.answer_button href="javascript:void(0)" 3
+    .answer_panel
+      a.answer_button href="javascript:void(0)" 4
+  .answer_choices.clearfix.centering
+    a#answer_submit.large-button 決定！
+
+  .hiddenform style="display:none"
+    input name="answer_choice" type="radio" value="1"
+    input name="answer_choice" type="radio" value="2"
+    input name="answer_choice" type="radio" value="3"
+    input name="answer_choice" type="radio" value="4"

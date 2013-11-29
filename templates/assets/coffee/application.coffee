@@ -13,6 +13,13 @@ require ['jquery','backbone','underscore'], ($,b,_) ->
     $('#q2_answer').on 'click', ->
       $('#ac4').attr 'id', 'r'
 
+    $('.answer_button').on 'click', ->
+      $('.answer_button').removeClass 'select'
+      $(this).addClass 'select'
+      $('input[name="answer_choice"]').attr('checked', false)
+      $('input[name="answer_choice"][value="'+$(this).text()+'"]').attr('checked', true)
+
+
     # 回答ページへ遷移 {{{
     $('#join').on 'click', ->
       $('#form').submit()
@@ -52,7 +59,7 @@ require ['jquery','backbone','underscore'], ($,b,_) ->
     # 正解を送信 }}}
 
     # websocket {{{ 
-    socket = io.connect 'http://192.168.50.32:10234'
+    socket = io.connect 'http://localhost:10234'
     socket.on 'news', (data) ->
       console.log data
     socket.on 'auth', (data) ->
